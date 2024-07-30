@@ -129,19 +129,23 @@ body {
         url("./images/bg-pattern-bottom-mobile.svg");
     background-repeat: no-repeat, no-repeat;
     background-position: top left, bottom right;
+    background-size: 100%, 100%;
 }
 
 /* HEADER STYLES */
 
 .body-header {
+    width: 100%;
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 3rem;
 }
 
 /* page introduction styles */
 
 .page-introduction {
+    max-width: 34.375rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -151,6 +155,7 @@ body {
 h1 {
     width: 85%;
     font-size: 2.5rem;
+    font-size: clamp(2.5rem, 3.75dvw, 3.25rem);
     font-weight: var(--fw-bold);
     line-height: 0.875;
     text-align: center;
@@ -158,6 +163,7 @@ h1 {
 }
 
 .introduction-paragraph {
+    font-size: clamp(1rem, 2.125dvw, 1.125rem);
     text-align: center;
     color: var(--clr-dark-grayish-magenta);
     line-height: 1.35;
@@ -165,12 +171,15 @@ h1 {
 
 /* reviews container styles */
 .reviews-container {
+    width: 100%;
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 1rem;
 }
 
 .review-rating-wrapper {
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -215,6 +224,11 @@ main {
     min-width: 20.4375rem;
 }
 
+.customer-review-card,
+.review-rating-wrapper {
+    max-width: 31.25rem;
+}
+
 .customer-data-container {
     display: flex;
     align-items: center;
@@ -243,6 +257,92 @@ main {
 
 .customer-review-paragraph {
     line-height: 1.35;
+}
+
+/* MEDIA QUERIES */
+
+@media (min-width: 43.75rem) {
+    body {
+        background-image: url("./images/bg-pattern-top-desktop.svg"),
+            url("./images/bg-pattern-bottom-desktop.svg");
+        background-size: auto;
+    }
+}
+
+@media (min-width: 65.875rem) {
+    body {
+        gap: 4rem;
+    }
+
+    .body-header {
+        max-width: 75rem;
+        flex-direction: row;
+        align-items: start;
+    }
+
+    .page-introduction {
+        max-width: none;
+        gap: 2rem;
+        flex: 1;
+    }
+
+    h1 {
+        align-self: start;
+        max-width: 28.125rem;
+        text-align: left;
+        margin-top: 0;
+    }
+
+    .introduction-paragraph {
+        max-width: 31.25rem;
+        align-self: start;
+        text-align: left;
+    }
+
+    .reviews-container {
+        flex: 1;
+
+        .review-rating-wrapper {
+            flex-direction: row;
+            align-items: center;
+            padding: 1rem;
+            gap: 2rem;
+        }
+
+        .stars-container {
+            margin-top: 0;
+        }
+
+        .review-rating-wrapper:nth-child(1) {
+            align-self: start;
+        }
+
+        .review-rating-wrapper:nth-child(3) {
+            align-self: end;
+        }
+    }
+
+    main {
+        max-width: 75rem;
+        min-height: 14.0625rem;
+        flex-direction: row;
+
+        .customer-review-card:nth-child(1) {
+            align-self: start;
+        }
+
+        .customer-review-card:nth-child(2) {
+            align-self: center;
+        }
+
+        .customer-review-card:nth-child(3) {
+            align-self: end;
+        }
+    }
+
+    .customer-review-card {
+        width: 33.33%;
+    }
 }
 
 .attribution {
