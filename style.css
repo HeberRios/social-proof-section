@@ -114,6 +114,12 @@ h6 {
     isolation: isolate;
 }
 
+body {
+    min-height: 100vh;
+    font-family: var(--ff-regular);
+    background-color: var(--white);
+}
+
 .attribution {
     font-size: 11px;
     text-align: center;
