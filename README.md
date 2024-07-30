@@ -31,8 +31,8 @@ Users should be able to:
 
 ### Links
 
--   Solution URL: [](https://www.frontendmentor.io/solutions/social-proof-section-iJAev2u9lt)
--   Live Site URL: [](https://heberrios.github.io/social-proof-section/)
+-   [Solution URL](https://www.frontendmentor.io/solutions/social-proof-section-iJAev2u9lt)
+-   [Live Site URL](https://heberrios.github.io/social-proof-section/)
 
 ## My process
 
